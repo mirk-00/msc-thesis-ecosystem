@@ -1,3 +1,4 @@
+from http import server
 from dash import Dash, html, dcc
 import plotly.express as px
 import dash_bootstrap_components as dbc
@@ -301,6 +302,8 @@ ewe_ascend_fig = fig
 #####################################################################################################
 #### Creazione della Dashboard
 app = Dash(__name__, external_stylesheets=[dbc.themes.MINTY])
+server = app.server
+
 
 app.layout = html.Div([
     dbc.Tabs([
